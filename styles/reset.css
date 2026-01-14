@@ -1,0 +1,42 @@
+/* Reset do CSS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll Suave para Âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Tipográfica */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mídias Responsivas */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Listas sem Estilo Padrão */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links Neutros por Padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}

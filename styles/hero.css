@@ -1,0 +1,133 @@
+/* ==============================
+   Seção Hero
+   ============================== */
+#hero {
+  /* Background Principal */
+  background-image: url(../assets/images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  position: relative;
+  isolation: isolate;
+  padding-top: 10rem;
+}
+  
+/* Overlay Escuro para Melhorar a Legibilidade do Texto */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+    
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+    
+  text-align: center;
+}
+
+#hero h2 {
+  font-family: var(--ff-title);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: var(--text);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#hero a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+    
+  background-color: var(--accent);
+  font-family: var(--ff-title);
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+    
+  cursor: pointer;
+  border: none;
+    
+  box-shadow: 0 4px 15px rgba(200, 155, 60, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#hero a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(200, 155, 60, 0.3);
+}
+
+#hero a:active {
+  transform: scale(0.95);
+}
+
+/* Ícone Indicativo de Scroll */
+#hero img {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+    
+  width: 40px;
+  height: 40px;
+    
+  opacity: 0.8;
+  z-index: 3;
+  animation: bounce 1.8s infinite;
+}
+
+/* Animação de Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10%)
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px)
+  }
+}
+
+
+/* ==============================
+   Layout Desktop
+   ============================== */
+@media (width > 768px) {
+  #hero {
+    padding-top: 20rem;
+  }
+
+  #hero h2 {
+    font-size: 4rem;
+  }
+
+  #hero img {
+    bottom: 2rem;
+  }
+}

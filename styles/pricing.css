@@ -1,0 +1,101 @@
+/* ================================
+   SERVICES — Lista de Serviços
+   ================================ */
+#services {
+  padding: 4rem 1.5rem;
+  background-color: var(--bg);
+}
+
+/* Container Principal da Seção */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Blocos Internos (texto, cards, preços, etc) */
+.services-content,
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Título da Seção */
+#services h2 {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Lista de Preços dos Serviços
+   Organiza Nome e Valor em Linhas */
+.pricing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espaçamento vertical entre os serviços */
+
+   /* Cada Item da Lista de Preços */
+  & li {
+    display: flex;
+    justify-content: space-between; /* Nome à esquerda, preço à direita */
+    align-items: center;
+    padding: 1rem 0;
+    
+    /* Linha Divisória Sutil Entre os Serviços */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Nome do Serviço */
+.service-name {
+  font-size: 1.25rem;
+}
+
+/* Preço do Serviço em Destaque */
+.service-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Container da Imagem do Serviço
+   Controla Corte e Bordas */
+.services-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+}
+
+/* Imagem Responsiva que Ocupa todo o Container */
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém proporção sem distorcer */
+}
+
+/* ================================
+   RESPONSIVO — Desktop
+   ================================ */
+@media (width > 768px) {
+  /* Layout em Duas Colunas no Desktop */
+  .services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  /* Elementos Visíveis Apenas no Desktop */
+  .desktop-only {
+    display: block;
+  }
+
+  /* Altura Fixa para Padronizar o Layout Visual */
+  .services-image {
+    height: 500px;
+  }
+}

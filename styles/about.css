@@ -1,0 +1,88 @@
+/* ==============================
+   Seção About (Sobre)
+   ============================== */
+#about {
+  padding: 4rem 1.5rem; /* Espaçamento interno da seção */
+  
+  /* Container Centralizador do Donteúdo */
+  & .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Bloco de Texto (título + descrição) */
+  & .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+
+    /* Título da Seção */
+    & h2 {
+      font-size: 2rem;
+    }
+
+    /* Texto Descritivo */
+    & p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+    }
+  }
+
+  /* Container da Imagem */
+  & .about-image {
+    width: 100%;
+    max-width: 400px;
+
+    /* Imagem do Barbeiro */
+    & img {
+    width: 100%;
+    height: auto;
+    
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  }
+}
+
+/* ==============================
+   Layout Desktop
+   ============================== */
+@media (width > 768px) {
+  /* Organiza Texto e Imagem Lado a Lado */
+  #about .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    
+    align-items: center;
+    text-align: left;
+  }
+
+  /* Ajustes de Leitura para Desktop */
+  #about .about-text {
+    max-width: none;
+    text-align: left;
+  }
+
+  #about .about-text h2 {
+    font-size: 3rem;
+  }
+
+  #about .about-text p {
+    font-size: 1.25rem;
+  }
+
+  /* Remove Limitação de Largura da Imagem */
+  #about .about-image {
+    max-width: 100%;
+  }
+}

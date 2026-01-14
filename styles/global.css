@@ -1,0 +1,55 @@
+/* =============================
+   DESIGN VARIABLES
+   Cores e Tipografia do Projeto
+============================= */
+:root {
+  /* Cores */
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  
+  --text: #f5f5f5;
+  --text-dark: #9ca3af;
+  
+  --accent: #c89b3c; /* dourado */
+
+  /* Tipografia */
+  --ff-title: "Bebas Neue", sans-serif;
+  --ff-sans: 'Inter', system-ui, sans-serif;
+  
+  --fw-base: 400;
+  --fw-md: 500;
+  --fw-bold: 800;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-xxl: 2.5rem;
+
+
+}
+
+/* =============================
+   BASE TIPOGRÁFICA
+============================= */
+html {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-base);
+  font-size: var(--fs-base);
+  color: var(--text);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* Títulos Principais */
+h1, h2 {
+  font-family: var(--ff-title);
+  color: var(--text);
+}
+
+/* Utilitário */
+.desktop-only {
+  display: none;
+}
